@@ -1,33 +1,47 @@
+body {
+    padding-left: 200px;
+    padding-top: 200px;
+}
+
 .box {
    background-color: red;
    width: 100px;
    height: 100px;
-   position: absolute;
+   position: relative;
 
-   animation-name: run-box1;
-   animation-duration: 5000ms;
+   animation-name: run-box;
+   animation-duration: 2500ms;
    animation-timing-function: linear;
    animation-iteration-count: infinite;
-   animation-direction: alternate;
+   animation-direction: normal;
 }
 
-@keyframes run-box1 {
+@keyframes run-box {
     0% {
         background-color: red;
+        top: 0px;
     }
 
     25% {
         background-color: blue;
-        transform: translateY(200px);
+        top: 200px;
+        left: 0px;
     }
 
     50% {
         background-color: green;
-        transform: translateX(200px);
+        left: 200px;
+        top: 200px;
+    }
+
+    75% {
+        background-color: yellow;
+        top: 0px;
+        left: 200px;
     }
 
     100% {
-        background-color: yellow;
-        transform: translateY(-200px);
+        background-color: red;
+        left: 0px;
     }
 }
